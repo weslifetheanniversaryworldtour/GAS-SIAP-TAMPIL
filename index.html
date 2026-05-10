@@ -25,58 +25,44 @@ background:#000;
 color:#fff;
 }
 
-/* ================= BACKGROUND ================= */
+/* BACKGROUND */
 
 .bg{
 position:fixed;
 inset:0;
-
 background:
 linear-gradient(to bottom,
 rgba(0,0,0,.35),
 rgba(0,0,0,.85)),
 url('330.png') center center/cover no-repeat;
-
 animation:bgZoom 30s ease-in-out infinite alternate;
-
 z-index:-5;
 }
 
 @keyframes bgZoom{
-from{
-transform:scale(1);
-}
-to{
-transform:scale(1.04);
-}
+from{transform:scale(1);}
+to{transform:scale(1.04);}
 }
 
-/* ================= LIGHT EFFECT ================= */
+/* LIGHT */
 
 .light{
 position:fixed;
 inset:0;
-
 background:
 radial-gradient(circle at center,
 rgba(255,170,0,.10),
 transparent 60%);
-
 animation:lightPulse 6s ease-in-out infinite;
-
 z-index:-4;
 }
 
 @keyframes lightPulse{
-0%,100%{
-opacity:.4;
-}
-50%{
-opacity:.8;
-}
+0%,100%{opacity:.4;}
+50%{opacity:.8;}
 }
 
-/* ================= PARTICLES ================= */
+/* PARTICLES */
 
 .particles{
 position:fixed;
@@ -88,21 +74,16 @@ z-index:-3;
 .particles span{
 position:absolute;
 bottom:-20px;
-
 background:#ffb347;
 border-radius:50%;
-
 opacity:.5;
-
 animation:float linear infinite;
 }
 
 @keyframes float{
 
 0%{
-transform:
-translateY(0)
-translateX(0);
+transform:translateY(0) translateX(0);
 opacity:0;
 }
 
@@ -111,56 +92,42 @@ opacity:.6;
 }
 
 100%{
-transform:
-translateY(-120vh)
-translateX(40px);
+transform:translateY(-120vh) translateX(40px);
 opacity:0;
 }
 
 }
 
-/* ================= LOADER ================= */
+/* LOADER */
 
 .loader{
 position:fixed;
 inset:0;
-
 background:
 linear-gradient(to bottom,
 rgba(0,0,0,.4),
 rgba(0,0,0,.88)),
 url('330.png') center center/cover no-repeat;
-
 display:flex;
 align-items:center;
 justify-content:center;
 flex-direction:column;
-
 z-index:99999;
+transition:1s;
 }
 
 .logo{
-
 font-family:'Cinzel',serif;
-
 font-size:72px;
 font-weight:900;
-
 letter-spacing:5px;
-
 background:
-linear-gradient(
-to bottom,
+linear-gradient(to bottom,
 #fff,
 #ffd89a,
 #ff9f1c);
-
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
-
-text-shadow:
-0 0 12px rgba(255,170,0,.25);
-
 }
 
 .loader-sub{
@@ -171,36 +138,25 @@ color:#ddd;
 }
 
 .loader-ring{
-
 margin-top:40px;
-
 width:180px;
 height:180px;
-
 border-radius:50%;
-
 display:flex;
 align-items:center;
 justify-content:center;
-
 position:relative;
-
 border:1px solid rgba(255,255,255,.08);
-
 background:rgba(255,255,255,.03);
 }
 
 .loader-ring::before{
 content:'';
-
 position:absolute;
 inset:-2px;
-
 border-radius:50%;
-
 border:3px solid transparent;
 border-top:3px solid #ffb347;
-
 animation:spin 1.5s linear infinite;
 }
 
@@ -226,38 +182,26 @@ font-weight:700;
 color:#ffb347;
 }
 
-/* ================= MAIN ================= */
+/* MAIN */
 
 .main{
 width:100%;
 height:100vh;
-
 display:flex;
 align-items:center;
 justify-content:center;
-
 padding:20px;
 }
 
 .card{
-
 width:100%;
 max-width:470px;
-
 padding:32px;
-
 border-radius:28px;
-
-background:
-rgba(0,0,0,.36);
-
+background:rgba(0,0,0,.36);
 backdrop-filter:blur(8px);
-
 border:1px solid rgba(255,255,255,.08);
-
-box-shadow:
-0 0 20px rgba(255,140,0,.10);
-
+box-shadow:0 0 20px rgba(255,140,0,.10);
 animation:cardFloat 5s ease-in-out infinite;
 }
 
@@ -271,47 +215,32 @@ transform:translateY(-5px);
 }
 
 .title{
-
 font-family:'Cinzel',serif;
-
 font-size:50px;
 font-weight:900;
-
 text-align:center;
-
 background:
-linear-gradient(
-to bottom,
+linear-gradient(to bottom,
 #fff,
 #ffd89a,
 #ff9f1c);
-
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
 
 .subtitle{
 margin-top:10px;
-
 text-align:center;
-
 font-size:12px;
 letter-spacing:5px;
-
 color:#ddd;
 }
 
 .queue-box{
-
 margin-top:30px;
-
 padding:25px;
-
 border-radius:20px;
-
-background:
-rgba(255,255,255,.05);
-
+background:rgba(255,255,255,.05);
 text-align:center;
 }
 
@@ -322,46 +251,29 @@ opacity:.8;
 }
 
 .queue-number{
-
 margin-top:8px;
-
 font-size:72px;
 font-weight:700;
-
 color:#ffb347;
-
-text-shadow:
-0 0 10px rgba(255,179,71,.3);
-
-transition:.4s;
+text-shadow:0 0 10px rgba(255,179,71,.3);
+transition:all .3s ease;
 }
 
 .info{
-
 margin-top:28px;
-
 line-height:1.8;
-
 font-size:14px;
-
 text-align:center;
-
 color:#ddd;
 }
 
-/* ================= TIMER ================= */
+/* TIMER */
 
 .timer-box{
-
 margin-top:24px;
-
 padding:16px;
-
 border-radius:18px;
-
-background:
-rgba(255,255,255,.04);
-
+background:rgba(255,255,255,.04);
 text-align:center;
 }
 
@@ -372,63 +284,39 @@ opacity:.7;
 }
 
 .timer{
-
 margin-top:8px;
-
 font-size:32px;
 font-weight:700;
-
 color:#ffb347;
 }
 
-/* ================= BUTTON ================= */
+/* BUTTON */
 
 .btn{
-
 margin-top:28px;
-
 width:100%;
 height:60px;
-
 border:none;
 border-radius:16px;
-
 font-size:17px;
 font-weight:700;
-
 letter-spacing:1px;
-
-background:
-linear-gradient(
-45deg,
-#444,
-#222);
-
+background:linear-gradient(45deg,#444,#222);
 color:white;
-
 cursor:not-allowed;
-
 opacity:.65;
-
 transition:.4s;
 }
 
 .btn.active{
-
 cursor:pointer;
-
 opacity:1;
-
 background:
-linear-gradient(
-45deg,
+linear-gradient(45deg,
 #ff9f1c,
 #ffd89a);
-
 color:#000;
-
-box-shadow:
-0 0 20px rgba(255,170,0,.20);
+box-shadow:0 0 20px rgba(255,170,0,.20);
 }
 
 .btn.active:hover{
@@ -437,17 +325,13 @@ transform:translateY(-2px);
 
 .footer{
 margin-top:20px;
-
 text-align:center;
-
 font-size:11px;
-
 letter-spacing:2px;
-
 opacity:.6;
 }
 
-/* ================= MOBILE ================= */
+/* MOBILE */
 
 @media(max-width:768px){
 
@@ -477,9 +361,7 @@ padding:24px;
 </head>
 <body>
 
-<!-- BACKGROUND -->
 <div class="bg"></div>
-
 <div class="light"></div>
 
 <!-- PARTICLES -->
@@ -488,9 +370,7 @@ padding:24px;
 <!-- LOADER -->
 <div class="loader" id="loader">
 
-<div class="logo">
-WESTLIFE
-</div>
+<div class="logo">WESTLIFE</div>
 
 <div class="loader-sub">
 PREMIUM WAITING ROOM
@@ -573,7 +453,7 @@ OFFICIAL PREMIUM ACCESS
 
 <script>
 
-/* ================= PARTICLES ================= */
+/* PARTICLES */
 
 const particles = document.getElementById('particles');
 
@@ -598,7 +478,7 @@ particles.appendChild(span);
 
 }
 
-/* ================= LOADING 60 DETIK ================= */
+/* LOADING */
 
 let percent =
 document.getElementById('percent');
@@ -618,32 +498,27 @@ clearInterval(loading);
 
 }
 
-},600);
+},30);
 
-/* ================= HIDE LOADER ================= */
+/* HIDE LOADER */
 
 setTimeout(()=>{
 
 const loader =
 document.getElementById('loader');
 
-loader.style.transition = "1.5s";
-
 loader.style.opacity = "0";
-
 loader.style.visibility = "hidden";
 
-},60000);
+},3000);
 
-/* ===================================================
-   FAKE TIMER 120 MENIT
-   REAL TIMER 10 MENIT
-=================================================== */
+/* TIMER */
 
 let fakeMinutes = 120;
 let fakeSeconds = 0;
 
-/* REAL TIMER */
+/* REAL TIMER 10 MENIT */
+
 let realDuration = 10 * 60;
 
 const timer =
@@ -652,27 +527,31 @@ document.getElementById('timer');
 const button =
 document.getElementById('ticketBtn');
 
-/* ================= DYNAMIC QUEUE ================= */
+/* QUEUE */
 
 let queueNumber =
-Math.floor(Math.random()*9000)+1000;
+Math.floor(Math.random()*5000)+4000;
 
 const queueElement =
 document.getElementById('queue');
 
+function updateQueue(){
+
 queueElement.innerHTML =
 String(queueNumber).padStart(4,'0');
+
+}
+
+updateQueue();
 
 const queueInterval =
 setInterval(()=>{
 
-/* Jika waktu asli habis */
 if(realDuration <= 0){
 
 queueNumber = 0;
 
-queueElement.innerHTML =
-"0000";
+updateQueue();
 
 clearInterval(queueInterval);
 
@@ -680,33 +559,35 @@ return;
 
 }
 
-/* Gerakan realistis */
-const randomMove =
-Math.floor(Math.random()*120);
+/* turun realistis */
 
-/* Turun */
-queueNumber -= randomMove;
+let decrease =
+Math.floor(Math.random()*25)+5;
 
-/* Kadang naik sedikit */
-if(Math.random() > 0.7){
+queueNumber -= decrease;
+
+/* kadang naik sedikit */
+
+if(Math.random() > 0.85){
 
 queueNumber +=
-Math.floor(Math.random()*30);
+Math.floor(Math.random()*10);
 
 }
 
-/* Jangan minus */
-if(queueNumber < 0){
-queueNumber = 0;
+/* jangan habis */
+
+if(queueNumber < 1){
+
+queueNumber = 1;
+
 }
 
-/* Update */
-queueElement.innerHTML =
-String(queueNumber).padStart(4,'0');
+updateQueue();
 
 },1200);
 
-/* ================= FAKE VISUAL TIMER ================= */
+/* FAKE TIMER */
 
 const fakeCountdown =
 setInterval(()=>{
@@ -735,7 +616,7 @@ timer.innerHTML =
 
 },1000);
 
-/* ================= REAL ACCESS TIMER ================= */
+/* REAL TIMER */
 
 const realCountdown =
 setInterval(()=>{
